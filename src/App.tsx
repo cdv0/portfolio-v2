@@ -35,7 +35,7 @@ function LandingPage() {
 
     return (
         <>
-            <div>
+            <div className="min-h-screen bg-white">
                 <Header/>
                 <div data-aos="slide-up">
                     <Home/>
