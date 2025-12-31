@@ -97,6 +97,7 @@ export default function Header() {
                                 smooth
                                 offset={offset}
                                 duration={50}
+                                onClick={() => setOpen(false)}
                                 onSetActive={() => setActiveHref(l.href)}
                                 activeClass="text-[#f05776] underline underline-offset-6"
                                 className={`cursor-pointer transition-colors hover:text-[#f05776] hover:underline hover:underline-offset-6 hover:bg-gray-100 rounded-lg py-2 px-4 ${activeHref === l.href ? "text-[#f05776] underline underline-offset-6 bg-gray-100" : ""}`}
