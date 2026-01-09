@@ -5,7 +5,7 @@ export const data = {
     tagline: "I design intuitive user experiences and develop full-stack applications with a strong focus on React for mobile and web.",
     email: "cathleendvu@gmail.com",
     portfolioLink: "https://cathleenvu.com/",
-    resumeLink: "https://drive.google.com/file/d/1c2YnitdH3xAfaQzB0NHYPgMgCsKuuCjO/view?usp=sharing",
+    resumeLink: "https://drive.google.com/file/d/1McpfoITqB9wNleSjYa_cUCf8eHuG4lAx/view?usp=sharing",
 
     navLinks: [
         { label: "Home", href: "#home", icon: "home" },
