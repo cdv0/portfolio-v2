@@ -228,9 +228,12 @@ export const data = {
             startDate: "March 2025",
             endDate: null,
             bullets: [
-            "Designed the UI/UX for the main dashboard and agentic chatbot assistant, focusing on clear user flows and cohesive product experiences.",
-            "Developed features in agile, sprint-based workflows by creating design specifications and high-fidelity designs, incorporating feedback, and implementing approved designs end-to-end.",
-            "Contributed across the product lifecycle by identifying usability issues, resolving platform bugs, and collaborating closely with the team on feature planning and improvements.",
+                "Led the creation of an agentic AI assistant that goes beyond conversational responses to perform real actions inside the product, such as generating tasks, updating guest information, and executing multi-step workflows using function calling and tool integration.",
+                "Conducted in-depth research on prompt engineering, LLM capabilities, and agentic system design to prototype and iterate on a production-ready AI workflow.",
+                "Designed and built the main product dashboard, focusing on scalable component architecture, clear information hierarchy, and intuitive user flows.",
+                "Developed an AI-driven budget estimation system that helps couples personalize budgets per category by factoring in overall budget, location-based averages, historical user data, preferences, and special requests.",
+                "Owned features from ideation to production, creating high-fidelity designs, engineering the final implementations, and refining interactions based on user feedback.",
+                "Worked cross-functionally with founders, designers, and engineers to plan features, debug complex issues, and ship improvements in fast-paced sprint cycles.",
             ]
         }
     ],
