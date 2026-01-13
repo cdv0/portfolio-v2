@@ -5,7 +5,7 @@ export default function Skills() {
         <section id="skills" className="scroll-mt-30 md:mt-24">
             <div>
                 <h2 className="font-extrabold text-center text-lg mb-2 sm:mb-3 md:mb-4 sm:text-xl">What I Do</h2>
-                <p className="text-center mb-20 px-10 sm:px-20 md:px-30 lg:px-50">{data.about.whatIDo}</p>
+                <p className="text-center mb-20 px-10 sm:px-20 md:px-30 lg:px-50 xl:px-70">{data.about.whatIDo}</p>
             </div>
 
             <div>
