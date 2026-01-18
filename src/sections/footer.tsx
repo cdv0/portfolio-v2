@@ -17,7 +17,13 @@ export default function Footer() {
                     <p className="font-semibold mb-2">Navigation</p>
                     <div className="flex flex-col gap-1">
                         {data.navLinks.map((l) => (
-                            <a className="text-gray-500 transition-colors hover:text-[#f05776] hover:underline hover:underline-offset-6" href={l.href}>{l.label}</a>
+                        <a
+                            key={l.label}
+                            className="text-gray-500 transition-colors hover:text-[#f05776] hover:underline hover:underline-offset-6"
+                            href={l.href === "/#home" ? "/" : l.href}
+                        >
+                            {l.label}
+                        </a>
                         ))}
                     </div>
                 </nav>

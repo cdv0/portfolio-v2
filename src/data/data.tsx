@@ -8,13 +8,13 @@ export const data = {
     resumeLink: "https://docs.google.com/document/d/1k8lstwJQP7NQ3rTlA8hDH6WxC2nl49yRE2h563p4nas/edit?usp=sharing",
 
     navLinks: [
-        { label: "Home", href: "#home", icon: "home" },
-        { label: "Skills", href: "#skills", icon: "skills" },
-        { label: "Projects", href: "#projects", icon: "projects" },
-        { label: "Experience", href: "#experience", icon: "experience" },
-        { label: "Education", href: "#education", icon: "education" },
-        { label: "About", href: "#about", icon: "about" },
-        { label: "Contact", href: "#contact", icon: "contact" }
+        { label: "Home", href: "/#home", icon: "home" },
+        { label: "Skills", href: "/#skills", icon: "skills" },
+        { label: "Projects", href: "/#projects", icon: "projects" },
+        { label: "Experience", href: "/#experience", icon: "experience" },
+        { label: "Education", href: "/#education", icon: "education" },
+        { label: "About", href: "/#about", icon: "about" },
+        { label: "Contact", href: "/#contact", icon: "contact" }
     ],
 
     about: {
@@ -67,10 +67,30 @@ export const data = {
 
     projects: [
         {
+            title: "Elura",
+            image: "/Elura.png",
+            description: "A native iOS skincare app that lets users scan or search products, view their ingredients, and ranks product quality using a structured ingredient database and rule-based safety scoring to help users quickly understand product safety and effectiveness.",
+            detailedDesc: "[In Progress]",
+            techStack: ["Swift", "SwiftUI"],
+            category: ["engineering", "ui/ux"],
+            contribution: [
+                "[In Progress]"
+            ]
+            ,
+            role: ["Full-Stack"],
+            url: {
+                figma: "https://www.figma.com/design/P6ElxjwmnMMbzvjipz1rp1/Elura-Design?node-id=0-1&t=qmr1YdRGUUOzxUAK-1",
+                github: "https://github.com/cdv0/elura"
+            },
+            startDate: "January 2026",
+            link: "/projects/elura",
+            slug: "elura"
+        },
+        {
             title: "Portfolio Website",
             image: "/Portfolio.png",
             description: "A custom-built personal portfolio website showcasing my work, skills, and background as a developer and UI/UX designer.",
-            detailedDesc: "This portfolio website was built to showcase my projects, skills, and experience in a clear and organized format. The site is fully responsive and designed to work smoothly across different screen sizes. I focused on clean layout, consistent spacing, and intuitive navigation to make content easy to scan. The project also served as a way to strengthen my frontend development skills and apply UI/UX principles in a real, self-directed build.",
+            detailedDesc: "This portfolio website showcases my projects, skills, and experience in a clean, responsive layout. I designed and built it to focus on clear structure, consistent spacing, and easy navigation, while using it as a self-directed project to strengthen my frontend and UI/UX skills.",
             techStack: ["HTML", "CSS", "JavaScript"],
             category: ["engineering", "ui/ux"],
             contribution: [
@@ -92,7 +112,7 @@ export const data = {
         {
             title: "Retrieval-Based QA System",
             image: "/qa-system.png",
-            detailedDesc: "This project implements a retrieval-based question answering system that matches user queries to the most relevant documents and sentences within a text corpus. It uses TF-IDF vectorization and cosine similarity as a baseline retrieval method. To improve accuracy, I integrated the Rocchio relevance feedback algorithm and compared its performance against cosine similarity alone. The system was built with a modular preprocessing and retrieval pipeline to support experimentation. This project highlights how relevance feedback can meaningfully impact retrieval quality.",
+            detailedDesc: "This project explores retrieval-based question answering by matching user queries to the most relevant documents and sentences in a corpus. I implemented a TF-IDF and cosine similarity baseline, then improved retrieval quality by integrating and evaluating the Rocchio relevance feedback algorithm. The system was built with a modular pipeline to support experimentation and comparison of ranking methods.",
             description: "A question answering system that uses information techniques to match user queries with the most relevant textual responses, comparing cosine similarity and Rocchio relevance feedback.",
             techStack: ["Python", "Streamlit"],
             role: ["Information Retrieval"],
@@ -115,25 +135,43 @@ export const data = {
         {
             title: "JAC",
             image: "/JAC.png",
-            detailedDesc: "JAC is a mobile application focused on a niche use case: providing a centralized place to view and review car mechanics using structured and verified service history. I owned the full-stack development for vehicles and service records, including data modeling, backend logic, and frontend integration. This allowed users to manage vehicles and attach maintenance records in a consistent, reliable way. I also led the UI/UX design for the entire app, conducting market research, user research, and defining user stories before creating low- and high-fidelity designs in Figma. Additionally, I contributed to frontend development for the settings page and overall interface polish.",
+            detailedDesc: "JAC is a mobile app for organizing vehicle ownership and maintenance while helping users discover and evaluate mechanics. I worked as the UI/UX lead and full-stack engineer, owning the Garage system and the core product experience from design through implementation.",
             description: "A mobile application that lets car owners track their vehicle maintenance, upload service records, and discover trusted mechanics. Reviews are marked as 'verified' only when matched with an uploaded service record, ensuring transparency and trust.",
-            techStack: ["React Native", "AWS", "TypeScript", "Tailwind"],
+            techStack: ["React Native", "AWS Lambda", "AWS API Gateway", "AWS S3", "AWS DynamoDB", "TypeScript", "Tailwind CSS"],
             role: ["Full-Stack"],
             category: ["engineering", "ui/ux"],
             contribution: 
             [
-                "Implemented CRUD functionality for vehicles and garage service records, including data modeling and frontend integration.",
-                "Designed and built the UI/UX for the entire application, creating wireframes and high-fidelity mockups in Figma and translating them into production-ready components.",
-                "Led feature planning and execution by organizing the design backlog, assigning tasks, and tracking sprint progress to ensure timely delivery across the team."
+                "Built the full Garage system, including vehicle CRUD, maintenance records, and data modeling, with end-to-end frontend and backend integration.",
+                "Designed and led the UI/UX for the entire app, from user research and wireframes to high-fidelity Figma designs and production-ready components.",
+                "Implemented cloud services using AWS (API Gateway, Lambda, S3, DynamoDB) to support secure data storage, media uploads, and scalable APIs.",
+                "Drove feature planning and delivery through Agile sprints, maintaining the product and design backlog, running standups, and participating in code reviews to ensure quality and on-time execution."
             ]
             ,
             url: {
-                github: "https://github.com/cdv0/JAC"
+                github: "https://github.com/cdv0/JAC",
+                figma: "https://www.figma.com/design/gNYIMzeYN7IZJ8u4hFpyNs/JAC?node-id=0-1&t=sFkanXwtwW8iEwhH-1"
             },
             startDate: "January 2025",
             endDate: null,
             link: "/projects/jac",
-            slug: "jac"
+            slug: "jac",
+            showcase: [
+            {
+                image: "/jac-business-bi.png",
+                title: "Product Design Leadership",
+                content: "At the start of this end-to-end project, our team conducted user interviews with mechanics and car owners, then translated those insights into user stories and core flows. We also performed market research on indirect competitors such as Yelp and the Better Business Bureau, created paper wireframes, low- to mid-fidelity layouts, and high-fidelity mockups, and defined the final UI system. I helped organize the product and sprint backlogs across four sprints, using a Kanban workflow in Trello and participating in standups and code reviews. As the designated Design Lead, I owned the overall UX/UI direction and visual system."
+            },
+            {
+                image: "/jac-garage-tri.png",
+                title: "End-to-End Feature Development: Garage System",
+                content: "I was responsible for the Garage feature end-to-end, where users can create, view, update, and delete vehicles, store structured vehicle information, and attach maintenance records to each vehicle. This included building the full frontend flow and connecting it to backend services for data storage and media uploads."
+            },
+            {
+                title: "What I Learned",
+                content: "Through this project, I strengthened my skills in TypeScript and React Native, gained hands-on experience with AWS services such as API Gateway, Lambda, S3, and DynamoDB, and learned how to design and ship features in an Agile, sprint-based team environment with code reviews and standups. I also developed strong collaboration and communication skills by working cross-functionally with other engineers and leading sprint planning."
+            }
+            ]
         },
         // {
         //     title: "Spotify Playlist UX Redesign",
@@ -149,7 +187,7 @@ export const data = {
         {
             title: "Table Tap",
             image: "/table-tap.png",
-            detailedDesc: "TableTap is a web-based POS system designed for a small family-owned restaurant, supporting both customer ordering and employee menu management. My primary contribution was designing and implementing the Asset screen, where restaurants create menu categories and reusable modifier groups. I designed the underlying data flow and backend structure to support flexible menu configuration without duplicating data. In addition, I led the UI/UX design for the entire application, defining user flows and creating low- and high-fidelity designs before implementation. This project emphasized scalable data modeling and clear, maintainable interfaces.",
+            detailedDesc: "TableTap is a web-based POS system for a small family-owned restaurant, supporting customer ordering and staff menu management. I led the UI/UX design and built the Asset screen, where restaurants manage menu categories and reusable modifier groups. I also designed the data flow and backend structure to support flexible, scalable menu configuration.",
             description: "Table Tap is a mobile ordering POS system that lets customers scan a table's QR code, browse the menu, and place orders. Staff receive orders through a backend dashboard, and restaurants can edit their menu through an integrated management interface.",
             techStack: ["React", "TypeScript", "Bootstrap", "Supabase", "AWS"],
             role: ["Full-Stack"],
@@ -162,7 +200,8 @@ export const data = {
             ]
             ,
             url: {
-                github: "https://github.com/cdv0/TableTap"
+                github: "https://github.com/cdv0/TableTap",
+                figma: "https://www.figma.com/design/vhPRzK2JqirTCtNcuQUTkO/TableTap?node-id=2-2&t=zmiu7o2w1Uk57i36-1"
             },
             startDate: "May 2025",
             endDate: null,
@@ -184,7 +223,7 @@ export const data = {
         {
             title: "End to End IoT Data Processing System",
             image: "/processing-system.png",
-            detailedDesc: "This project simulates smart appliance sensor data and processes it through a TCP-based client-server system. Incoming data is transmitted to a server and stored in MongoDB for structured querying and transformation. The system was deployed on Google Cloud Platform using virtual machine instances with manual network configuration. Users interact with the application through a command-line interface to execute predefined queries. This project provided hands-on experience with networking, cloud deployment, and data processing pipelines.",
+            detailedDesc: "This project simulates a smart appliance data pipeline, where sensor readings are transmitted over a TCP client–server system, processed, and stored in MongoDB for querying and analysis. I deployed the system on Google Cloud Platform using virtual machines and manual network configuration, gaining hands-on experience with networking, cloud infrastructure, and end-to-end data processing workflows.",
             description: "An IoT program that processes sensor data from virtual smart appliances over TCP and stores the results in MongoDB. The system runs on GCP VM instances, where users connect via IP and port and use a CLI to run predefined data transformation queries.",
             techStack: ["Python", "MongoDB", "Dataniz", "GCP"],
             role: ["Full-Stack"],

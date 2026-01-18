@@ -2,7 +2,7 @@ import { data } from "../data/data";
 
 export default function Home() {
     return (
-        <section id="home" className="scroll-mt-30">
+        <section id="home" className="">
             <div className="flex flex-col gap-6 mt-2 mb-20 pt-25 md:pt-50 sm:mb-35 gap-7 md:gap-8 md:mb-46 lg:mb-48">
                 <div className="flex flex-col items-center gap-1">
                     <p className="font-bold text-center text-3xl md:mb-2 md:text-4xl lg:text-5xl lg:font-semibold">Hi, I'm {data.name}</p>

@@ -7,7 +7,7 @@ export default function Experience() {
     }
 
     return (
-        <section id="experience" className="mt-24 md:mt-30 scroll-mt-30">
+        <section id="experience" className="mt-24 md:mt-30">
             <h2 className="font-extrabold text-center text-lg sm:text-xl mb-3 sm:mb-4 md:mb-5 lg:mb-6">Experience</h2>
 
             <div className="flex flex-col gap-6 mx-auto max-w-6xl px-8">

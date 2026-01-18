@@ -2,7 +2,7 @@ import { data } from "../data/data"
 
 export default function About() {
     return (
-        <section id="about" className="mt-24 md:mt-30 scroll-mt-30">
+        <section id="about" className="mt-24 md:mt-30">
             <h2 className="font-extrabold text-center text-lg sm:text-xl mb-3 sm:mb-4 md:mb-5 lg:mb-6">About Me</h2>
 
             <div className="mx-auto max-w-6xl px-6 sm:px-10 lg:px-16 flex flex-col gap-6 md:flex-row md:items-start">

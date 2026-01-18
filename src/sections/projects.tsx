@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 export default function Projects() {
     return (
-        <section id="projects" className="scroll-mt-30 mt-20 md:mt-24">
+        <section id="projects" className="mt-20 md:mt-24">
             <h2 className="font-extrabold text-center text-lg mb-3 sm:mb-4 md:mb-5 lg:mb-6 sm:text-xl">Projects</h2>
 
             <div className="mx-auto max-w-6xl px-8 grid gap-8 sm:grid-cols-2">

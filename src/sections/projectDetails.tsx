@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useParams, useNavigate, useLocation } from "react-router-dom"
 import { data } from "../data/data"
+import Footer from "./footer"
 
 export default function ProjectDetails() {
     const { slug } = useParams()
@@ -82,20 +83,20 @@ export default function ProjectDetails() {
 
                         <div className="flex flex-col items-start">
                             <div className="pb-3">
-                                <h3 className="font-bold text-lg">{project.title}</h3>
+                                <h3 className="font-bold text-xl">{project.title}</h3>
                                 <p className="mt-2 mr-10 text-gray-700">{project.detailedDesc}</p>
                             </div>
 
                             <div className="flex flex-wrap justify-start gap-3">
                                 {project.url?.liveDemo ? (
-                                    <a href={project.url.liveDemo} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center gap-2 bg-[#f05776] text-white transition-colors hover:bg-[#f37891] font-bold pl-4 pr-6 py-2 rounded-3xl transition-smooth">
+                                    <a href={project.url.liveDemo} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center gap-2 bg-[#f05776] text-white transition-colors hover:bg-[#f37891] font-bold pl-4 pr-5 py-2 rounded-3xl transition-smooth">
                                         <img src="/ne-white.svg" className="h-5 w-5" />
                                         <p className="text-sm lg:text-base">Live Demo</p>
                                     </a>
                                 ) : null}
 
                                 {project.url?.github ? (
-                                    <a href={project.url.github} target="_blank" rel="noopener noreferrer" className="group flex justify-center items-center gap-2 bg-white border border-gray-300 font-bold pl-4 pr-6 py-2 rounded-3xl transition-colors hover:text-[#f05776] hover:border-[#f37891]">
+                                    <a href={project.url.github} target="_blank" rel="noopener noreferrer" className="group flex justify-center items-center gap-2 bg-white border border-gray-300 font-bold pl-4 pr-5 py-2 rounded-3xl transition-colors hover:text-[#f05776] hover:border-[#f37891]">
                                         <span className="relative h-6 w-6">
                                             <img src="/github-mark.svg" className="absolute inset-0 h-5 w-5 sm:h-6 sm:w-6 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
                                             <img src="/github-mark.svg" className="absolute inset-0 h-5 w-5 sm:h-6 sm:w-6 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
@@ -104,13 +105,24 @@ export default function ProjectDetails() {
                                         <p className="text-sm lg:text-base">View Source</p>
                                     </a>
                                 ) : null}
+
+                                {project.url?.figma ? (
+                                    <a href={project.url.figma} target="_blank" rel="noopener noreferrer"     className="group flex justify-center items-center gap-2 bg-white border border-gray-300 font-bold pl-4 pr-5 py-2 rounded-3xl transition-colors hover:text-[#f05776] hover:border-[#f37891]">
+                                        <span className="relative h-6 w-6">
+                                            <img src="/figma-cropped.svg" className="absolute inset-0 h-5 w-5 sm:h-6 sm:w-6 transition-opacity duration-200 opacity-100 group-hover:opacity-0" />
+                                            <img src="/figma-cropped.svg" className="absolute inset-0 h-5 w-5 sm:h-6 sm:w-6 transition-opacity duration-200 opacity-0 group-hover:opacity-100" />
+                                        </span>
+
+                                        <p className="text-sm lg:text-base">View Figma</p>
+                                    </a>
+                                ) : null}
                             </div>
                         </div>
                     </section>
 
-                    <section className="mt-12 w-full grid gap-3 lg:gap-4 lg:grid-cols-3">
-                        <div className="flex flex-col gap-3">
-                            <div className="rounded-xl p-6 bg-gray-100">
+                    <section className="mt-12 w-full grid gap-3 lg:gap-4 lg:grid-cols-3 items-stretch">
+                        <div className="flex flex-col gap-3 h-full">
+                            <div className="rounded-xl p-6 bg-gray-100 flex-1">
                                 <h3 className="font-extrabold text-md">Technology Stack</h3>
                                 <p className="mt-2 text-md text-gray-700 leading-relaxed">{Array.isArray(project.techStack) ? project.techStack.join(", ") : project.techStack}</p>
                             </div>
@@ -121,7 +133,7 @@ export default function ProjectDetails() {
                             </div>
                         </div>
 
-                        <div className="rounded-xl p-6 bg-gray-100 lg:col-span-2">
+                        <div className="rounded-xl p-6 bg-gray-100 lg:col-span-2 h-full">
                             <h3 className="font-extrabold text-md">Contributions</h3>
                             <ul className="list-disc pl-6 mt-2 space-y-1 text-gray-700">
                                 {project.contribution?.map((c: string) => (
@@ -130,8 +142,57 @@ export default function ProjectDetails() {
                             </ul>
                         </div>
                     </section>
+
+                    <section className="w-full pt-10">
+                        {project.showcase && (
+                            <div className="flex items-center gap-4">
+                                <h2 className="font-bold text-lg whitespace-nowrap">Showcase</h2>
+                                <hr className="flex-grow h-[2px] bg-[#f69aac] rounded-full border-0" />
+                            </div>
+                        )}
+
+                        <div className="mt-8 space-y-12">
+                            {project.showcase?.map((item, idx) => {
+                                const isFullWidth = !item.image
+                                const isInverted = idx === 1
+
+                                if (isFullWidth) {
+                                    return (
+                                        <div key={idx} className="w-full flex justify-center">
+                                        <div className="max-w-3xl text-center">
+                                            <h3 className="font-extrabold text-md">{item.title}</h3>
+                                            <p className="mt-2 text-gray-700 leading-relaxed">{item.content}</p>
+                                        </div>
+                                        </div>
+                                    )
+                                    }
+
+                                return (
+                                    <div
+                                        key={idx}
+                                        className={`flex flex-col lg:flex-row items-center gap-6 ${
+                                            isInverted ? "lg:flex-row-reverse" : ""
+                                        }`}
+                                        >
+                                        <div className="flex-shrink-0 w-full lg:w-auto">
+                                            <img
+                                                src={item.image}
+                                                alt={item.title}
+                                                className="w-full max-w-full lg:max-w-[500px] h-auto rounded-lg"
+                                            />
+                                        </div>
+                                        <div className="flex flex-col justify-center">
+                                            <h3 className="font-extrabold text-md">{item.title}</h3>
+                                            <p className="mt-2 text-gray-700 leading-relaxed">{item.content}</p>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </section>
                 </div>
-            </main>``
+            </main>
+            <Footer/>
         </div>
     )
 }

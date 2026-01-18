@@ -13,7 +13,7 @@ export default function Contact() {
     }, [state.succeeded]);
 
     return (
-        <section id="contact" className="mt-24 md:mt-30 scroll-mt-40 mb-20 w-full mx-auto max-w-6xl px-16 flex flex-col gap-8 md:gap-20 md:flex-row">
+        <section id="contact" className="mt-24 md:mt-30 mb-20 w-full mx-auto max-w-6xl px-16 flex flex-col gap-8 md:gap-20 md:flex-row">
             {/* LEFT */}
             <div className="flex flex-col items-center text-center gap-4 md:justify-center lg:items-start lg:text-left lg:w-56 lg:items-center">
                 <h2 className="font-extrabold text-center text-lg sm:text-xl mb-3 sm:mb-4 md:mb-5 lg:mb-6">Let's Connect!</h2>
